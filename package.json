@@ -1,27 +1,41 @@
 {
-  "name": "final-project",
+  "name": "acme_school",
   "version": "0.0.1",
   "description": "A review time project",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "npm run build-watch & npm run start-server ",
-    "build-watch": "webpack -w",
-    "start-server": "nodemon --watch server -e js,html server/index.js"
+    "lint": "./node_modules/.bin/eslint",
+    "build": "webpack",
+    "build:dev": "npm run build -- --watch --mode=development",
+    "seed": "node script/seed.js",
+    "start": "node server",
+    "start:dev": "npm run build:dev & npm run start-server",
+    "start:dev:logger": "LOGGING=true npm run start:dev",
+    "start:dev:seed": "SEED=true npm run start:dev",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "test": "NODE_ENV=test JWT=a_secret mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" --require @babel/register --require esm ",
+    "test:dev": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
+    "aos": "^3.0.0-beta.6",
     "axios": "^0.27.2",
     "chalk": "^5.0.1",
     "cors": "^2.8.5",
+    "emoji-picker-react": "^3.6.2",
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
     "pg": "^8.7.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
     "react-redux": "^v8.0.1",
     "react-router-dom": "^6.3.0",
     "redux-thunk": "^2.4.1",
@@ -35,7 +49,7 @@
     "@babel/preset-env": "7.17.10",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-stage-2": "^7.8.3",
-    "babel-loader": "8.2.5",
+    "babel-loader": "^8.2.5",
     "webpack": "^5.72.0",
     "webpack-dev-server": "^4.7.3"
   }
