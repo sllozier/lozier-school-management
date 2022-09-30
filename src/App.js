@@ -14,7 +14,7 @@ function App(){
        <div id='main'>
             <div className='column container'>
                 <div id='header'>
-                    <h1>ACME School Management System</h1>
+                    <h1>Lozier School Management System</h1>
                     <Navbar/>
                 </div>
             </div>
