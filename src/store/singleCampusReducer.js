@@ -27,6 +27,7 @@ export const setCampus = (campus) => {
       try{
         const { data: campus }  = await axios.get(`/api/campuses/${campusId}`);
         dispatch(setCampus(campus));
+        console.log('CAMPUSTHUNK', campus)
       }catch(error){
         console.log('FETCH CAMPUS THUNK ERROR: ', error);
       }
