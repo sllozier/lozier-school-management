@@ -1,7 +1,7 @@
 {
-  "name": "acme_school",
+  "name": "lozier_school",
   "version": "0.0.1",
-  "description": "A review time project",
+  "description": "",
   "engines": {
     "node": "16.x"
   },
@@ -12,12 +12,13 @@
     "build:dev": "npm run build -- --watch --mode=development",
     "seed": "node script/seed.js",
     "start": "node server",
-    "start:dev": "npm run build:dev & npm run start-server",
+    "start:dev": "npm run build:dev & npm run start-server & npm run css-watch",
     "start:dev:logger": "LOGGING=true npm run start:dev",
     "start:dev:seed": "SEED=true npm run start:dev",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
-    "test": "NODE_ENV=test JWT=a_secret mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" --require @babel/register --require esm ",
-    "test:dev": "npm run test -- --watch"
+    "test:dev": "npm run test -- --watch",
+    "css-build": "node-sass --omit-source-map-url public/sass/mystyles.scss public/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -50,6 +51,8 @@
     "@babel/preset-react": "7.16.7",
     "@babel/preset-stage-2": "^7.8.3",
     "babel-loader": "^8.2.5",
+    "bulma": "^0.9.4",
+    "node-sass": "^7.0.3",
     "webpack": "^5.72.0",
     "webpack-dev-server": "^4.7.3"
   }

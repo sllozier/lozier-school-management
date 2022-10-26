@@ -17,19 +17,40 @@ const AllCampuses = () => {
         dispatch(clearCampus());
     }, []);
 
-
+  
   return (
-    <div id='campuses' className='column'>
+
+    <section className='section container is-max-desktop'>
+      <h1 className='title is-5 has-text-grey'>Campus List</h1>
+      <div className='box' id="campuses">
+        <h1 className='title is-4 mb-2'>Campuses</h1>
+    <div className='list'>
       {campuses
         ? campuses.map((campus) => (
-            <div className='campuses' key={`All Campuses ${campus.id}`}>
+            <div className='list-item' key={`${campus.id}`}>
               <Link to={`/campuses/${campus.id}`}>
-                <h3>{campus.name}</h3>
-                <h6>Location: {campus.address}</h6>
+                <div className='list-item-image'>
+                  <figure className='image is-64x64'>
+                    <img className='is-rounded' src={campus.imageUrl}/>
+                  </figure>
+                </div>
               </Link>
-              <button onClick={() => dispatch(deleteThisCampus(campus.id))}className='delete-button'>X</button>
-              <hr/>
+              <div className='list-item-content'>
+                <div className='list-item-title'>{campus.name}</div>
+                <div className='list-item-description'>{campus.address}</div>
+              </div>
+              <div className='list-item-controls'>
+                <div className='buttons is-right'>
+                  <button className='button' onClick={() => dispatch(deleteThisCampus(campus.id))}>
+                    <span className='icon is-small'>
+                      <i className='fas fa-trashcan'></i>
+                    </span>
+                    <span>Delete</span>
+                  </button>
+                </div>
+              </div>
             </div>
+            
           ))
       :null}
       <hr />
@@ -38,6 +59,8 @@ const AllCampuses = () => {
       </div>
         
     </div>
+    </div>
+    </section>
    )
 };
 

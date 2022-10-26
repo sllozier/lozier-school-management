@@ -15,28 +15,28 @@ const syncAndSeed = async () => {
       name: 'Library', 
       address: 'Next to janitors office',
       description: 'The library has more than enough space as it spans two floors. There is a large open space in the center where students can work together or in small groups. The second floor has multiple rooms for small groups to work and is the perfect spot for Saturday detention.',
-      imageUrl: 'library.jpg',
+      imageUrl: '/piccies/library.svg',
       })
   
   const parkingLot = await Campus.create({
       name: 'Parking Lot',
       address: 'Just outside Shermer High School',
       description: 'This is where your detention begins folks. Leave all your dreams here and maybe you will get a kiss at the end of the day!',
-      imageUrl: 'parkingLot.jpg',
+      imageUrl: '/piccies/parkingLot.svg',
   })
   
   const hallway = await Campus.create({
       name: 'Hallway',
       address: 'Just outside the doors of the library',
       description: 'Freedom lies in the halls of Shermer High School. Beware! Prinicpal Dick is lurking! Hide your grass, man!',
-      imageUrl: 'hallway.jpg',
+      imageUrl: '/piccies/hallway.svg',
   })
   
   const footballField = await Campus.create({
       name: 'Football Field',
       address: 'Across the parking lot from the school entrance',
       description: 'You survived detention and got the girl. Pump that fist!',
-      imageUrl: 'footballField.jpg',
+      imageUrl: '/piccies/football.svg',
   })
   
   await Student.create({
