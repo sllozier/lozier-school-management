@@ -20,8 +20,8 @@ const AllStudents = () => {
 
   return (
     <section className='section container is-max-desktop'>
-      <h1 className='title is-5 has-text-black'>Campus List</h1>
-      <div className='box' id="campuses">
+      <h1 className='title is-5 has-text-black'>Student List</h1>
+      <div className='box' id="students">
     <div className='list'>
       {students
         ? students.map((student) => (
@@ -59,30 +59,6 @@ const AllStudents = () => {
     </div>
     </div>
     </section>
-
-
-
-
-
-
-
-    // <div id='students' className='column'>
-    //   {students
-    //     ? students.map((student) => (
-    //         <div className='students' key={`All Students ${student.id}`}>
-    //           <Link to={`/students/${student.id}`}>
-    //             <h3>Name: {student.firstName} {student.lastName}</h3>
-    //             <h6>Email: {student.email} GPA: {student.gpa}</h6>
-    //             <img src={student.imageUrl}/>
-    //           </Link>
-    //           <button onClick={() => dispatch(deleteThisStudent(student.id))}className='delete-button'>X</button>
-    //           <hr/>
-    //         </div>
-    //       ))
-    //   :null}
-    //   <hr />
-    //     <AddStudent />
-    // </div>
    )
 };
 

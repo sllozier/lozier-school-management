@@ -56,7 +56,7 @@ const InfoTabs = () => {
             <div id="campuses" className="content-tab">
                 <AllCampuses/>
             </div>
-            <div id="students" className="content-tab" >
+            <div id="students" className="content-tab" style={{display:"none"}}>
                 <AllStudents/>
             </div>
         </div>
