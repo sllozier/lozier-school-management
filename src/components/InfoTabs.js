@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
-// import TabContent from "./TabContent";
-// import TabNavItem from "./TabNavItem";
 
 const InfoTabs = () => {
 
@@ -32,11 +30,7 @@ const InfoTabs = () => {
                     </h1>
                 </div>
                 </div>
-
-
-
                 <div className="hero-foot">
-        
             <nav className="tabs is-centered is-boxed is-large" >
                 <div className="container">           
                 <ul>
