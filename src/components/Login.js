@@ -22,31 +22,39 @@ const Login = () =>{
     };
 
     return(
-       <section className="is-white has-text-centered">
+       <section className=" has-text-centered mt-6">
        <div className="container">
-        <div className="columns is-mobile">
+        <div className="columns has-background-white is-multiline is-mobile">
             <div className="column is-half">
-                <figure className="image is-96x96 is-inline-block">
+                <figure className="image is-128x128 is-inline-block mt-6 mb-6">
                 <img className="logo" src="piccies/schoolManagement.svg"/>
                 </figure>
-                <h1 className="title has-text-black is-spaced is-size-2-desktop is-size-3-tablet is-size-4-mobile">
+                <h1 className="title has-text-black is-spaced is-size-3-desktop is-size-4-tablet is-size-5-mobile mb-3">
                     Please login to manage your school
                 </h1>
                 <form id="form" onSubmit={handleSubmit}>
-                    <div className="columns is-centered">
-                        <div className="column">
+                    <div className="columns is-centered m-5">
+                        <div className="column is-narrow">
                             <div className="field">
-                                <label className="label is-medium has-text-black" htmlFor="name">Name</label>
-                                <div className="control is-expanded">
-                                    <input className="input is-medium" name="name" type="text" value={form.name} onChange={handleChange} required/>
-                                </div>
+                                <label className="label has-text-black" htmlFor="name">Name</label>
+                                <div className="control has-icons-left has-icons-right">
+                                    <input className="input is-primary" name="name" type="text" placeholder="Name" value={form.name} onChange={handleChange} required/>
+                                    <span className="icon is-small is-left">
+                                        <i className="fa-solid fa-user-large"></i>
+                                    </span>
+                                </div>                            
                             </div>
                         </div>
-                        <div className="column">
+                        </div>
+                        <div className="columns is-centered m-5">
+                        <div className="column is-narrow">
                             <div className="field">
-                                <label className="label is-medium has-text-black" htmlFor="password">Password</label>
-                                <div className="control is-expanded">
-                                    <input className="input is-medium"name="password" type="password" value={form.password} onChange={handleChange} required/>
+                                <label className="label has-text-black" htmlFor="password">Password</label>
+                                <div className="control has-icons-left has-icons-right">
+                                    <input className="input is-primary" name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required/>
+                                    <span className="icon is-small is-left">
+                                    <i className="fa-solid fa-lock"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +63,7 @@ const Login = () =>{
                     <div className="column">
                                 <div className="field">
                                     <div className="control">
-                                    <button className="button is-success is-medium">Submit</button>
+                                    <button className="button is-success has-text-black is-medium">Submit</button>
                                     </div>
                                 </div>
                             </div>    
