@@ -6,20 +6,18 @@ import SingleStudent from "./components/SingleStudent";
 import SingleCampus from './components/SingleCampus';
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import InfoTabs from "./components/InfoTabs";
 
 function App(){
 
     return(
         
        <div id='main'>
-            <div className='column container'>
-                <div id='header'>
-                    <h1>Lozier School Management System</h1>
                     <Navbar/>
-                </div>
-            </div>
-
             <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/tabs' element={<InfoTabs/>}/>
                 <Route path='/students' element={<AllStudents/>}/>
                 <Route path='/campuses' element={<AllCampuses/>}/>
                 <Route path='/students/:studentId/' element={<SingleStudent/>}/>

@@ -21,16 +21,15 @@ const AllCampuses = () => {
   return (
 
     <section className='section container is-max-desktop'>
-      <h1 className='title is-5 has-text-grey'>Campus List</h1>
+      <h1 className='title is-5 has-text-black'>Campus List</h1>
       <div className='box' id="campuses">
-        <h1 className='title is-4 mb-2'>Campuses</h1>
     <div className='list'>
       {campuses
         ? campuses.map((campus) => (
             <div className='list-item' key={`${campus.id}`}>
               <Link to={`/campuses/${campus.id}`}>
                 <div className='list-item-image'>
-                  <figure className='image is-64x64'>
+                  <figure className='image is-128x128'>
                     <img className='is-rounded' src={campus.imageUrl}/>
                   </figure>
                 </div>
@@ -39,11 +38,11 @@ const AllCampuses = () => {
                 <div className='list-item-title'>{campus.name}</div>
                 <div className='list-item-description'>{campus.address}</div>
               </div>
-              <div className='list-item-controls'>
+              <div className='list-item-controls has-text-black'>
                 <div className='buttons is-right'>
-                  <button className='button' onClick={() => dispatch(deleteThisCampus(campus.id))}>
+                  <button className='button is-success' onClick={() => dispatch(deleteThisCampus(campus.id))}>
                     <span className='icon is-small'>
-                      <i className='fas fa-trashcan'></i>
+                    <i className="fa-solid fa-trash-can"></i>
                     </span>
                     <span>Delete</span>
                   </button>

@@ -1,12 +1,34 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
 
 const Navbar = () => {
+
+
     return(
-        <div id='navbar' className='row'>
-            <NavLink to='/students' className='active'>Students</NavLink>
-            <NavLink to='/campuses' className='active'>Campuses</NavLink>
+       <nav className='navbar is-transparent'>
+        <div className='container'>
+        <div className='navbar-brand'>
+            <a className='image is-64x64' href="/">
+                <img src='piccies/schoolManagement.svg'/>
+            </a>
+            <a role='button' className='navbar-burger' area-label='menu' aria-expanded='false' data-target='navbarBasic'></a>
+            <span area-hidden='true'></span>
+            <span area-hidden='true'></span>
+            <span area-hidden='true'></span>
         </div>
+
+        <div id='navBarBasic' className='navbar-menu'>
+            <div className='navbar-start'>
+                <a className='navbar-item is-active' href="/">
+                    <span className='icon is-large'>
+                    <i className="fa-solid fa-house">
+                    </i>
+                    </span>
+                </a>
+            </div>
+            </div>
+        </div>
+       </nav>
     );
 };
 
