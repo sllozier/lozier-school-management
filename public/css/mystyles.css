@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+.login-bg {
+  background: url("/public/piccies/breakfastClubBackground.svg");
+    background-background-position: center center;
+    background-background-repeat: no-repeat;
+    background-background-attachment: fixed;
+    background-background-size: cover;
+    background-background-color: #999; }
+
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
