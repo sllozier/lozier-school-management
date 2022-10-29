@@ -24,8 +24,8 @@ const Login = () =>{
     return(
        <section className=" has-text-centered mt-6">
        <div className="container">
-        <div className="columns has-background-white is-multiline is-mobile">
-            <div className="column is-half">
+        <div className="columns has-background-white is-mobile">
+            <div className="column is-half-desktop is-three-quarters-mobile is-two-thirds-tablet is-one-third-widescreen is-one-quarter-fullhd">
                 <figure className="image is-128x128 is-inline-block mt-6 mb-6">
                 <img className="logo" src="piccies/schoolManagement.svg"/>
                 </figure>
@@ -42,7 +42,10 @@ const Login = () =>{
                                     <span className="icon is-small is-left">
                                         <i className="fa-solid fa-user-large"></i>
                                     </span>
-                                </div>                            
+                                    <span className="icon is-small is-right">
+                                    <i className="fa-solid fa-check"></i>
+                                    </span>
+                                </div>                           
                             </div>
                         </div>
                         </div>
@@ -71,7 +74,7 @@ const Login = () =>{
                     
                 </form>
             </div>
-            <div className="column is-half">  
+            <div className="column">  
             <img src="piccies/breakfastClubBackground.svg"/>         
             </div>
         </div>
