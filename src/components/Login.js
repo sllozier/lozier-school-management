@@ -38,7 +38,7 @@ const Login = () =>{
                             <div className="field">
                                 <label className="label has-text-black" htmlFor="name">Name</label>
                                 <div className="control has-icons-left has-icons-right">
-                                    <input className="input is-primary" name="name" type="text" placeholder="Name" value={form.name} onChange={handleChange} required/>
+                                    <input className="input is-primary" name="username" type="text" placeholder="username" value={form.username} onChange={handleChange} required/>
                                     <span className="icon is-small is-left">
                                         <i className="fa-solid fa-user-large"></i>
                                     </span>

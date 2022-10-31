@@ -41,6 +41,7 @@
     "react-icons": "^4.4.0",
     "react-redux": "^v8.0.1",
     "react-router-dom": "^6.3.0",
+    "reactjs-popup": "^2.0.5",
     "redux-thunk": "^2.4.1",
     "sequelize": "^6.20.0",
     "volleyball": "^1.5.1",

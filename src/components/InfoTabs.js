@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
+import AddCampus from "./AddCampus";
 
 const InfoTabs = () => {
 
@@ -34,7 +35,7 @@ const InfoTabs = () => {
             <nav className="tabs is-centered is-boxed is-large" >
                 <div className="container">           
                 <ul>
-                    <li className="tab is-active" onClick={() => openTab(event, "campuses")}>
+                    <li className="tab" onClick={() => openTab(event, "campuses")}>
                     <a>
                     <span className="icon is-small"><i className="fas fa-image" ></i></span>
                     <span>Campuses</span>

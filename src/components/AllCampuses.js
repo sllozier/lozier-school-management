@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import AddCampus from './AddCampus';
 
 
+
 const AllCampuses = () => {
   const dispatch = useDispatch();
-    
+ 
     
     const campuses = useSelector(state => state.campuses);
 
@@ -19,9 +20,9 @@ const AllCampuses = () => {
 
   
   return (
-
+    
     <section className='section container is-max-desktop'>
-      <h1 className='title is-5 has-text-black'>Campus List</h1>
+      <AddCampus/>
       <div className='box' id="campuses">
     <div className='list'>
       {campuses
@@ -51,12 +52,7 @@ const AllCampuses = () => {
             </div>
             
           ))
-      :null}
-      <hr />
-      <div className='add'>
-      <AddCampus />
-      </div>
-        
+      :null}       
     </div>
     </div>
     </section>

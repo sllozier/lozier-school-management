@@ -20,7 +20,7 @@ const AllStudents = () => {
 
   return (
     <section className='section container is-max-desktop'>
-      <h1 className='title is-5 has-text-black'>Student List</h1>
+     <AddStudent/>
       <div className='box' id="students">
     <div className='list'>
       {students
