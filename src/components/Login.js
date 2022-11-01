@@ -38,7 +38,7 @@ const Login = () =>{
                             <div className="field">
                                 <label className="label has-text-black" htmlFor="name">Name</label>
                                 <div className="control has-icons-left has-icons-right">
-                                    <input className="input is-primary" name="username" type="text" placeholder="username" value={form.username} onChange={handleChange} required/>
+                                    <input className="input is-primary" name="username" type="text" placeholder="Username" value={form.username} onChange={handleChange} required/>
                                     <span className="icon is-small is-left">
                                         <i className="fa-solid fa-user-large"></i>
                                     </span>
@@ -57,6 +57,9 @@ const Login = () =>{
                                     <input className="input is-primary" name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required/>
                                     <span className="icon is-small is-left">
                                     <i className="fa-solid fa-lock"></i>
+                                    </span>
+                                    <span className="icon is-small is-right">
+                                    <i className="fa-solid fa-check"></i>
                                     </span>
                                 </div>
                             </div>

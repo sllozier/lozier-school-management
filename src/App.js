@@ -1,30 +1,35 @@
 import React from "react";
-import { BrowserRouter } from 'react-router-dom';
-import  AllStudents from './components/AllStudents';
-import AllCampuses from './components/AllCampuses';
-import SingleStudent from "./components/SingleStudent";
-import SingleCampus from './components/SingleCampus';
-import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import InfoTabs from "./components/InfoTabs";
+import {
+    AllStudents,
+    AllCampuses,
+    SingleCampus,
+    SingleStudent,
+    Navbar,
+    Home,
+    InfoTabs,
+    EditCampus,
+    EditStudent
+} from "./components";
 
 function App(){
 
     return(
         
-       <div id='main'>
+       <>
                     <Navbar/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/tabs' element={<InfoTabs/>}/>
                 <Route path='/students' element={<AllStudents/>}/>
                 <Route path='/campuses' element={<AllCampuses/>}/>
-                <Route path='/students/:studentId/' element={<SingleStudent/>}/>
-                <Route path='/campuses/:campusId/' element={<SingleCampus/>}/>
-                <Route path='/' element={<AllCampuses/>}/>
+                <Route path='/students/:id/' element={<SingleStudent/>}/>
+                <Route path='/campuses/:id/' element={<SingleCampus/>}/>
+                <Route path='/campuses/:id/edit' element={<EditCampus/>}/>
+                <Route path='/students/:id/edit'element={<EditStudent/>}/>
+                {/* <Route path='/' element={<AllCampuses/>}/> */}
             </Routes>
-       </div>
+      </>
        
     )
 }

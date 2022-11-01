@@ -47,13 +47,19 @@ const AddStudent = () => {
               <form id='form' onSubmit={handleSubmit}>
                   <div className='field'>
                       <label className='label' htmlFor='firstName'>First Name:</label>
-                      <div className='control'>
+                      <div className='control has-icons-right has-icons-left'>
                           <input className='input is-success' 
                               name='firstName' 
                               type="text" 
                               placeholder="First Name" 
                               value={form.firstName}
                               onChange={handleChange('firstName')}/>
+                            <span className='icon is-small is-left'>
+                                <i className="fa-solid fa-user-plus"></i>
+                            </span>
+                            <span className='icon is-small is-right'>
+                              <i className='fa-solid fa-check'></i>
+                            </span>
                       </div>
                   </div>
                   <div className='field'>
@@ -72,15 +78,18 @@ const AddStudent = () => {
                   </div>
                   <div className='field'>
                       <label className='label' htmlFor='email'>Email:</label>
-                      <div className='control has-icons-right'>
+                      <div className='control has-icons-right has-icons-left'>
                           <input className="input is-success"
                               name="email"
                               type="email"
                               placeholder="Email"
                               value={form.email}
                               onChange={handleChange("email")}/>
-                          <span className='icon is-small is-right'>
+                          <span className='icon is-small is-left'>
                                 <i className="fa-solid fa-envelope"></i>
+                          </span>
+                          <span className='icon is-small is-right'>
+                              <i className='fa-solid fa-check'></i>
                           </span>
                       </div>
                   </div>

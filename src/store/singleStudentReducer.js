@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const SET_STUDENT = "SET_STUDENT";
 const UPDATE_STUDENT = "UPDATE_STUDENT";
-const UNENROLL = "UNENROLL"
+
 
 
 
@@ -22,12 +22,6 @@ export const setStudent = (student) => {
     };
   };
   
-  export const unenroll = (student) => {
-    return {
-      type: UNENROLL,
-      student,
-    };
-  };
   
   
   export const fetchOneStudent = (studentId) => {
@@ -45,6 +39,7 @@ export const setStudent = (student) => {
   export const updateThisStudent = (student, studentId) => {
     return async (dispatch) => {
       try{
+        console.log("UPDATE STUDENT THUNK", student, studentId)
         const { data: updatedStudent } = await axios.put(`/api/students/${studentId}`, student);
         dispatch(updateStudent(updatedStudent));
       }catch(error){
@@ -53,16 +48,7 @@ export const setStudent = (student) => {
     };
   };
 
-  export const unenrollThisStudent = (student) => {
-    return async (dispatch) => {
-        try{
-            const { data: unenrolledStudent } = await axios.put(`/api/students/${student.id}`, student);
-            dispatch(updateStudent(unenrolledStudent));
-        }catch(error){
-            console.log('UNENROLL STUDENT THUNK ERROR: ', error)
-        }
-    };
-  };
+  
   
   
   export const singleStudentReducer = (state = {}, action) => {
@@ -70,9 +56,7 @@ export const setStudent = (student) => {
       case SET_STUDENT:
         return action.student;
       case UPDATE_STUDENT:
-        return action.student;
-      case UNENROLL:
-        return {...state, campusId: null};
+        return {...state, student: action.student};
       default:
         return state;
     }

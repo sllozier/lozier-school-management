@@ -3,3 +3,4 @@ public/bundle.js.map
 node_modules
 .env
 .idea
+bundle.js.LICENSE.txt

@@ -5,7 +5,7 @@
   "engines": {
     "node": "16.x"
   },
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
     "build": "webpack",
@@ -17,7 +17,7 @@
     "start:dev:seed": "SEED=true npm run start:dev",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
     "test:dev": "npm run test -- --watch",
-    "css-build": "node-sass --omit-source-map-url public/sass/mystyles.scss public/css/mystyles.css",
+    "css-build": "webpack --mode production",
     "css-watch": "npm run css-build -- --watch"
   },
   "keywords": [],
@@ -28,7 +28,8 @@
     "@reduxjs/toolkit": "^1.8.1",
     "aos": "^3.0.0-beta.6",
     "axios": "^0.27.2",
-    "bulma-modal-fx": "^1.1.1",
+    "bulma-floating-button": "^1.0.3",
+    "bulma-list": "^1.2.0",
     "chalk": "^5.0.1",
     "cors": "^2.8.5",
     "emoji-picker-react": "^3.6.2",
@@ -44,9 +45,7 @@
     "reactjs-popup": "^2.0.5",
     "redux-thunk": "^2.4.1",
     "sequelize": "^6.20.0",
-    "volleyball": "^1.5.1",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "volleyball": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
@@ -55,8 +54,12 @@
     "@babel/preset-stage-2": "^7.8.3",
     "babel-loader": "^8.2.5",
     "bulma": "^0.9.4",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.3",
-    "webpack": "^5.72.0",
-    "webpack-dev-server": "^4.7.3"
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

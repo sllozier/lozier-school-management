@@ -50,13 +50,19 @@ const AddCampus = () => {
             <form id='form' onSubmit={handleSubmit}>
                 <div className='field'>
                     <label className='label' htmlFor='name'>Campus Name</label>
-                    <div className='control'>
+                    <div className='control has-icons-left has-icons-right'>
                         <input className='input is-success' 
                             name='name' 
                             type="text" 
                             placeholder="Campus Name" 
                             value={form.name}
                             onChange={handleChange('name')}/>
+                        <span className='icon is-small is-left'>
+                            <i className='fa-solid fa-school'></i>
+                        </span>
+                        <span className='icon is-small is-right'>
+                            <i className='fa-solid fa-check'></i>
+                        </span>
                     </div>
                 </div>
                 <div className='field'>
@@ -69,7 +75,7 @@ const AddCampus = () => {
                             value={form.address}
                             onChange={handleChange("address")}/>
                         <span className='icon is-small is-left'>
-                            <i className='fa-solid fa-school'></i>
+                            <i className="fa-solid fa-map-location-dot"></i>
                         </span>
                         <span className='icon is-small is-right'>
                             <i className='fa-solid fa-check'></i>
