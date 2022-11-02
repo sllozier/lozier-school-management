@@ -4,14 +4,12 @@ import { addNewStudent } from '../store/studentsReducer';
 import Popup from 'reactjs-popup';
 
 const AddStudent = () => {
-
+    const dispatch = useDispatch();
     const [ form, setForm ] = useState({
         firstName: '',
         lastName: '',
         email: '',
     });
-
-    const dispatch = useDispatch();
 
     const handleChange = prop => event => {
         setForm({

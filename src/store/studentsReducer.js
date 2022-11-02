@@ -12,15 +12,13 @@ export const setStudents = (data) => {
     };
   };
   
-  
   export const addStudent = (student) => {
     return {
       type: ADD_STUDENT,
       student,
     };
   };
-  
-  
+    
   export const deleteStudent = (student) => {
     return{
       type: DELETE_STUDENT,
@@ -45,8 +43,7 @@ export const setStudents = (data) => {
       }
     };
   };
-  
-  
+    
   export const addNewStudent = (student) => {
     return async (dispatch) => {
       try{
@@ -57,8 +54,7 @@ export const setStudents = (data) => {
       }
     };
   };
-  
-  
+    
   export const deleteThisStudent = (id) => {
       
     return async (dispatch) => {
@@ -70,9 +66,7 @@ export const setStudents = (data) => {
       }
     };
   };
-  
-  
-  
+   
   export const studentsReducer = (state = [], action) => {
     switch (action.type) {
       case SET_STUDENTS:

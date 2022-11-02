@@ -8,15 +8,12 @@ import AddCampus from './AddCampus';
 
 const AllCampuses = () => {
   const dispatch = useDispatch();
- 
-    
-    const campuses = useSelector(state => state.campuses);
+  const campuses = useSelector(state => state.campuses);
 
-
-    useEffect(() => {
-        dispatch(fetchAllCampuses());
-        dispatch(clearCampus());
-    }, []);
+  useEffect(() => {
+      dispatch(fetchAllCampuses());
+      dispatch(clearCampus());
+  }, []);
 
   
   return (
@@ -59,8 +56,7 @@ const AllCampuses = () => {
                   </button>
                 </div>
               </div>
-            </div>
-            
+            </div>           
           ))
       :null}       
     </div>

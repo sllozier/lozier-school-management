@@ -20,16 +20,16 @@ const EditCampus = () => {
      })
 
 
-     const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(updateThisCampus({
             name: form.name,
             address: form.address,
         }, params.id, campus));
         navigate('/tabs');
-     }
+    }
 
-     const handleChange = prop => event => {
+    const handleChange = prop => event => {
         setForm({
             ...form,
             [prop]: event.target.value

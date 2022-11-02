@@ -5,15 +5,12 @@ const ADD_CAMPUS = "ADD_CAMPUS";
 const DELETE_CAMPUS = "DELETE_CAMPUS";
 const CLEAR_CAMPUS = "CLEAR_CAMPUS";
 
-
-
 export const setCampuses = (data) => {
   return{
     type: SET_CAMPUSES,
     campuses: data,
   };
 };
-
 
 export const addCampus = (campus) => {
   return {
@@ -22,7 +19,6 @@ export const addCampus = (campus) => {
   };
 };
 
-
 export const deleteCampus = (campus) => {
   return{
     type: DELETE_CAMPUS,
@@ -30,16 +26,12 @@ export const deleteCampus = (campus) => {
   };
 };
 
-
 export const clearCampus = () => {
   return{
     type: CLEAR_CAMPUS,
     campus: null,
   };
 };
-
-
-
 
 export const fetchAllCampuses = () => {
   return async (dispatch) => {
@@ -52,7 +44,6 @@ export const fetchAllCampuses = () => {
   };
 };
 
-
 export const addNewCampus = (campus) => {
   return async (dispatch) => {
     try{
@@ -63,7 +54,6 @@ export const addNewCampus = (campus) => {
     }
   };
 };
-
 
 export const deleteThisCampus = (id) => {
     
@@ -76,8 +66,6 @@ export const deleteThisCampus = (id) => {
     }
   };
 };
-
-
 
 export const campusesReducer = (state = [], action) => {
   switch (action.type) {

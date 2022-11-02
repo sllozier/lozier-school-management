@@ -33,7 +33,7 @@ const Student = db.define('student', {
     },
     imageUrl: {
         type: Sequelize.STRING,
-        defaultValue: 'https://postimg.cc/q6fgs3f3'
+        defaultValue: '/piccies/defaultStudentImg.svg'
     },
     quote: {
         type: Sequelize.TEXT,

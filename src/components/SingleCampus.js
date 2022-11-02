@@ -15,7 +15,6 @@ const SingleCampus = () => {
     const navigate = useNavigate();
     const campus   = useSelector(state =>  state.campus);
     const campuses = useSelector(state => state.campuses);
-    const students = useSelector(state => state.students);
     const isEnrollee = campus.students;
 
     useEffect(() => {
@@ -27,14 +26,11 @@ const SingleCampus = () => {
     }, []);
 
     const handleRemove = (enrollee) => {
-        console.log('HANDLE REMOVE', enrollee)
+        console.log('HANDLE REMOVE', enrollee, enrollee.id)
         dispatch(unregisterStudent(enrollee.id, enrollee));
         dispatch(updateThisStudent({id: enrollee.id, campusId: null}, enrollee.id));
     }
-   
- //^^^^ This is setting campusId to null in the database but I can't get the browser to update.
- //I am moving on to other areas of the project so I don't waste time here FOREVERRR...
- //I looked at creating a useState but couldn't quite get it going.    
+       
 
     return (
         <>
@@ -111,7 +107,10 @@ const SingleCampus = () => {
                 </div>
             </div>
         </section>
-        <button onClick={() => navigate(-1)} className="button is-floating is-success has-text-black"><i className="fa-solid fa-backward"></i></button>
+            <a href="/tabs" className="button is-floating is-success has-text-black">
+                    <i className="fa-solid fa-backward"></i>
+            </a>
+        
         </>
       );
     };

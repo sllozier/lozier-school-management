@@ -1,12 +1,7 @@
 import axios from 'axios';
 
-
 const SET_STUDENT = "SET_STUDENT";
 const UPDATE_STUDENT = "UPDATE_STUDENT";
-
-
-
-
 
 export const setStudent = (student) => {
     return{
@@ -21,9 +16,7 @@ export const setStudent = (student) => {
       student,
     };
   };
-  
-  
-  
+   
   export const fetchOneStudent = (studentId) => {
     return async (dispatch) => {
       try{
@@ -34,8 +27,7 @@ export const setStudent = (student) => {
       }
     };
   };
-  
-  
+    
   export const updateThisStudent = (student, studentId) => {
     return async (dispatch) => {
       try{
@@ -47,9 +39,6 @@ export const setStudent = (student) => {
       }
     };
   };
-
-  
-  
   
   export const singleStudentReducer = (state = {}, action) => {
     switch (action.type) {

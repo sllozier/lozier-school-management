@@ -27,7 +27,6 @@ function App(){
                 <Route path='/campuses/:id/' element={<SingleCampus/>}/>
                 <Route path='/campuses/:id/edit' element={<EditCampus/>}/>
                 <Route path='/students/:id/edit'element={<EditStudent/>}/>
-                {/* <Route path='/' element={<AllCampuses/>}/> */}
             </Routes>
       </>
        

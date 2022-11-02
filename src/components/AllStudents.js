@@ -56,8 +56,7 @@ const AllStudents = () => {
                   </button>
                 </div>
               </div>
-            </div>
-            
+            </div>           
           ))
       :null}       
     </div>

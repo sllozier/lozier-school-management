@@ -1,11 +1,7 @@
 import axios from 'axios';
-import { updateThisStudent } from './singleStudentReducer';
 
 const SET_CAMPUS = "SET_CAMPUS";
 const UPDATE_CAMPUS = "UPDATE_CAMPUS";
-
-
-
 
 export const setCampus = (campus) => {
     return{
@@ -21,7 +17,6 @@ export const setCampus = (campus) => {
     };
   };
 
-  
   export const fetchOneCampus = (campusId) => {
     return async (dispatch) => {
       try{
@@ -32,7 +27,6 @@ export const setCampus = (campus) => {
       }
     };
   };
-  
   
   export const updateThisCampus = (campus, campusId) => {
     return async (dispatch) => {
@@ -48,11 +42,9 @@ export const setCampus = (campus) => {
   export const unregisterStudent = (student) =>{
     return async(dispatch, getState) => {
       try{
-        console.log("UNREGISTER", student)
         const campusState = getState();
         const singleCampus = campusState.campus;
         const students = singleCampus.students;
-
         for (let i= 0; i < students.length; i++){
           if (students[i].id === student) students.splice(i,1)
         }

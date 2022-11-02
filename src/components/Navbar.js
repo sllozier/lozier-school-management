@@ -10,7 +10,7 @@ const Navbar = () => {
                 <li>
                     <a href="/">
                         <span className='icon is-medium'>
-                        <i className="fa-solid fa-house-user"></i>
+                            <i className="fa-solid fa-house-user"></i>
                         </span>
                         <span>Home</span>
                     </a>

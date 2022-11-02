@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
-import AddCampus from "./AddCampus";
 
 const InfoTabs = () => {
 
@@ -30,27 +29,29 @@ const InfoTabs = () => {
                         Campus and Student Data
                     </h1>
                 </div>
-                </div>
-                <div className="hero-foot">
+            </div>
+            <div className="hero-foot">
             <nav className="tabs is-centered is-boxed is-large" >
                 <div className="container">           
-                <ul>
-                    <li className="tab" onClick={() => openTab(event, "campuses")}>
-                    <a>
-                    <span className="icon is-small"><i className="fas fa-image" ></i></span>
-                    <span>Campuses</span>
-                    </a>
-                    </li>
-                    <li className="tab" onClick={() => openTab(event, "students")}>
-                    <a>
-                    <span className="icon is-small"><i className="fas fa-music"></i></span>
-                    <span>Students</span>
-                    </a>
-                    </li>
-                </ul>  
+                    <ul>
+                        <li className="tab" onClick={() => openTab(event, "campuses")}>
+                            <a>
+                                <span className="icon is-small">
+                                    <i className="fas fa-image" ></i></span>
+                                <span>Campuses</span>
+                            </a>
+                        </li>
+                        <li className="tab" onClick={() => openTab(event, "students")}>
+                            <a>
+                                <span className="icon is-small">
+                                    <i className="fas fa-music"></i></span>
+                                <span>Students</span>
+                            </a>
+                        </li>
+                    </ul>  
                 </div>          
-        </nav>
-        </div>
+            </nav>
+            </div>
         </section>
 
         <div className="container section">

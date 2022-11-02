@@ -8,13 +8,11 @@ import Popup from 'reactjs-popup';
 
 
 const AddCampus = () => {
-
+    const dispatch = useDispatch();
     const [ form, setForm ] = useState({
         name: '',
         address: '',
     });
-
-    const dispatch = useDispatch();
 
     const handleChange = prop => event => {
         setForm({
@@ -28,13 +26,10 @@ const AddCampus = () => {
         dispatch(addNewCampus({
             name: form.name,
             address: form.address }));
-        
     };
 
     useEffect(() => {
     }, [form])
-
-
 
     return (
        <div className='container m-3'>

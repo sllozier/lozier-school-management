@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { fetchOneStudent } from '../store/singleStudentReducer';
-import { fetchAllCampuses } from '../store/campusesReducer';
-import EditStudent from './EditStudent';
-
+import { fetchOneStudent, updateThisStudent } from '../store/singleStudentReducer';
 
 const SingleStudent = () => {
     const dispatch = useDispatch();
@@ -20,7 +17,10 @@ const SingleStudent = () => {
         }
     }, []);
 
-    
+    const handleRemove = (student) => {
+        dispatch(updateThisStudent({id: student.id, campusId: null}, student.id));
+        navigate('/tabs');
+    }
     
 
     return (
