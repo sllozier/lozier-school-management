@@ -6,7 +6,6 @@
   </a>
 </div>
 
-
 ---
 
 <h3 align="center">Lozier School Management was created using:</h3>
